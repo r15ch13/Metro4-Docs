@@ -57,9 +57,10 @@ validation-status.json
 # Folders to ignore
 bower_components
 node_modules
-_includes
+build
 
 # Special files
+package-lock.json
 .ftpauth
 deploy.bat
 commit.bat
