@@ -141,7 +141,7 @@ module.exports = function(grunt) {
         'postcss',
         'copy',
         'replace',
-        //'ftp_push'
+        'ftp_push'
     ]);
 
 };
