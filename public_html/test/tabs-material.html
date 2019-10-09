@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <meta name="metro4:jquery" content="false">-->
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Tabs material - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container">
+    <div>
+        <button class="button primary" data-index="1">Open tab 1</button>
+        <button class="button primary" data-index="2">Open tab 2</button>
+    </div>
+    <br/>
+    <div>
+        <button class="button secondary" data-index="1">Open tab 1</button>
+        <button class="button secondary" data-index="2">Open tab 2</button>
+    </div>
+    <ul class="app-bar-present pos-relative" data-role="materialtabs">
+        <li class="active" id="tab1"><a href="#insights">Insights</a></li>
+        <li id="tab2"><a href="#information">Informations</a></li>
+    </ul>
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+    $("button.primary").on("click", function(){
+        var index = +$(this).attr("data-index");
+        var tabs = $("ul").data("materialtabs");
+
+        tabs.open(index);
+    });
+    $("button.secondary").on("click", function(){
+        var index = +$(this).attr("data-index");
+        var tabs = $("ul").data("materialtabs");
+        var tab = $("#tab"+index);
+
+        tabs.openTab(tab);
+    })
+</script>
+</body>
+</html>

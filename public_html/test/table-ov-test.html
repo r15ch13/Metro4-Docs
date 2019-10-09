@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <meta name="metro4:jquery" content="false">-->
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Table HTML test - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container" style="background-color: #EAEAEA;">
+    <div class="row">
+        <div class="cell-12">
+            <h1>Свободные VS для сервиса Виртуальный выделенный сервер</h1>
+        </div>
+    </div>
+    <div class="row flex-justify-between flex-nowrap ml-0 mr-0 mt-2">
+        <div class="w-100">
+            <div id="table-search"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cell-12">
+
+            <form method="post" id="submit_form">
+                <input type="hidden" name="action" id="action" />
+                <table class="table striped row-hover table-border row-border cell-border mt-4 entities-table big"
+                       data-cls-table-top="row"
+                       data-pagination="true"
+                       data-role="table"
+                       data-rows="-1"
+                       data-rownum="true"
+                       data-search-wrapper="#table-search"
+                       data-cell-wrapper="false"
+                       data-show-pagination="true"
+                       data-show-rows-steps="false"
+                       data-table-search-title="Быстрый поиск:"
+                       data-source="ov.json"
+                       data-on-draw-cell="drawCell"
+                >
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--<script src="../js/jquery-3.3.1.min.js"></script>-->
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+    function drawCell(td, value, index, head, item){
+        var p;
+        if (head.name === 'id') {
+            p = "<label for=\"vpsid"+value+"\"><input type=\"checkbox\" id=\"vpsid"+value+"\" name=\"vpsid[]\" value=\""+value+"\" /></label>";
+            td.html(p);
+        }
+        if (head.name === 'vs') {
+            p = "<a href=\"javascript:showDetail(0, '"+value+"');\">"+value+"</a>";
+            td.html(p);
+        }
+    }
+</script>
+</body>
+</html>

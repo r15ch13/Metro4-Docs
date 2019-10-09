@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+    <link href="custom--streamer.css" rel="stylesheet">
+
+    <style>
+        .streams {
+            opacity: .5;
+        }
+        .stream-event .slide-data {
+            width: auto!important;
+            max-width: calc(100% - 48px)!important;
+        }
+    </style>
+
+    <title>Streamer - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container">
+    <div class="mt-20 mb-20">
+        <button class="button" onclick="reload(1)">Load JSON1</button>
+        <button class="button" onclick="reload(2)">Load JSON2</button>
+    </div>
+    <div id="streamer" class="streamer-expand-sm" data-role="streamer" data-source="streamer_data_june-3.json" data-start-from="08:00" data-slide-to-start="false" data-on-events-scroll="eventsScroll"></div>
+</div>
+
+
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+
+    function reload(ind){
+        var sourse=""
+    }
+
+    function eventsScroll(scroll, oldScroll, scrollDir){
+        var el = $(this), streams = el.find(".streams");
+        var el_offset = el.offset().left;
+        var streams_width = streams.width();
+
+        $.each(el.find(".stream-event"), function(){
+            var event = $(this), data = event.find(".slide-data");
+            var event_offset = event.offset().left - el_offset - streams_width;
+            var data_width = data.width() + 36;
+            var event_width = event.width();
+            var visible_part = event_width + event_offset > 0 ? event_width + event_offset  : 0;
+
+            if (event_offset < 0) {
+                if (visible_part >= data_width) {
+                    data.css({
+                        left: Math.abs(event_offset)
+                    });
+                }
+            }
+
+            if (event_offset >= 0) {
+                data.css({
+                    left: 0
+                });
+            }
+        })
+    }
+</script>
+</body>
+</html>

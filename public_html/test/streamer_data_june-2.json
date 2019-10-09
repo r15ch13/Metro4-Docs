@@ -1,0 +1,79 @@
+{
+    "actions": [
+        {
+            "html": "<span class=\"title-event\">EVENTS</span>"
+        },
+        {
+            "html": "<span class='mobile-menu'></span>",
+            "cls": "mobile-btn",
+            "onclick": "menuToggle()"
+        }
+    ],
+    "timeline": {
+        "start": "08:00",
+        "stop": "21:00",
+        "step": 5
+    },
+    "streams": [
+        {
+            "title": "Technical Program",
+            "secondary": "IMS Technical Sessions",
+            "icon": "<span></span>",
+            "cls": "bg-greyblue empty top-br br-bt",
+            "events": [
+                 
+            ]
+        },
+        {
+            "title": " ",
+            "secondary": "Workshops & Short Courses",
+            "icon": " ",
+            "cls": "bg-greyblue fg-dark br-bt",
+            "events": [
+                {
+                    "time": "08:00",
+                    "title": "SSA: ",
+                    "subtitle": " The Dynamics, Bifurcation, and Practical Stability Analysis/Design of Nonlinear Microwave Circuits and Networks",
+                    "desc": "8:00 - 17:15",
+                    "size": 160,
+                    "row": 1,
+                    "target": "",
+                    "cls": "session-color-ff8a00",
+                    "clsClosedIcon": "fg-white"
+                },
+                {
+                    "time": "09:00",
+                    "title": "SSA: ",
+                    "subtitle": " The Dynamics, Bifurcation, and Practical Stability Analysis/Design of Nonlinear Microwave Circuits and Networks",
+                    "desc": "8:00 - 17:15",
+                    "size": 20,
+                    "row": 2,
+                    "target": "",
+                    "cls": "session-color-ff8a00",
+                    "clsClosedIcon": "fg-white",
+                    "skip": false
+                },
+                {
+                    "time": "08:15",
+                    "title": "SSA: ",
+                    "subtitle": " The Dynamics, Bifurcation, and Practical Stability Analysis/Design of Nonlinear Microwave Circuits and Networks",
+                    "desc": "8:00 - 17:15",
+                    "size": 20,
+                    "row": 3,
+                    "target": "",
+                    "cls": "session-color-ff8a00",
+                    "clsClosedIcon": "fg-white",
+                    "skip": false
+                }
+            ]
+        }
+    ],
+    "global": {
+        "before": [
+           
+        ],
+        "after": [
+            
+        ]
+    }
+}

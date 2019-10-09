@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Dialog - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container">
+    <div class="button" onclick="Metro.dialog.open('#dialog1')">Open dialog</div>
+
+    <script>
+        var dialogActions = [
+            {
+                caption: "Agree",
+                cls: "js-dialog-close alert",
+                onclick: function(){
+                    alert("You clicked Agree action");
+                }
+            },
+            {
+                caption: "Disagree",
+                cls: "js-dialog-close",
+                onclick: function(){
+                    alert("You clicked Disagree action");
+                }
+            }
+        ];
+    </script>
+    <div data-role="dialog" data-actions="dialogActions" id="dialog1">
+        <div class="dialog-title">Use Windows location service?</div>
+        <div class="dialog-content">
+            Bassus abactors ducunt ad triticum.
+            A fraternal form of manifestation is the bliss.
+        </div>
+    </div>
+</div>
+
+
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+
+</script>
+</body>
+</html>

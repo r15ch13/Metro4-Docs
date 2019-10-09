@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <meta name="metro4:jquery" content="false">-->
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Inputs - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container" style="padding-top: 400px;">
+    <form class="row" method="post">
+        <input type="hidden" name="act" value="1">
+
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>Имя, Фамилия <span class="fg-red">*</span></label>
+                <input type="text" name="form[name]" value="" data-role="input">
+            </div>
+        </div>
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>E-mail <span class="fg-red">*</span></label>
+                <input type="text" name="form[email]" value="" data-role="input">
+            </div>
+        </div>
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>Телефон</label>
+                <input type="text" name="form[phone]" value="" data-role="input">
+            </div>
+        </div>
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>Тема <span class="fg-red">*</span></label>
+                <input type="text" name="form[subj]" value="" data-role="input">
+            </div>
+        </div>
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>Сообщение <span class="fg-red">*</span></label>
+                <textarea name=form[aliases] data-role="textarea" cols=60 rows=3>
+11111111111111
+22222222222222
+33333333333333
+44444444444444
+                </textarea>
+            </div>
+        </div>
+        <div class="cell-12 mb-4">
+            <div class="form-group">
+                <label>Сообщение <span class="fg-red">*</span></label>
+                <textarea name="form[msg]" rows="7" style="min-height: 200px;" data-role="textarea" data-auto-size="true"></textarea>
+            </div>
+        </div>
+        <div class="cell-12">
+            <input type="submit" class="button primary" value="Отправить запрос">
+        </div>
+    </form>
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+</script>
+</body>
+</html>

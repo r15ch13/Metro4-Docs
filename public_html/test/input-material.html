@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="metro4:init" content="false">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Windows - Metro 4 :: Popular HTML, CSS and JS library</title>
+    <style>
+        .input-material {
+            width: 300px;
+        }
+    </style>
+</head>
+<body class="h-vh-100 d-flex flex-align-center flex-justify-center flex-column">
+
+<input type="text" data-role="materialinput" placeholder="Enter your email">
+
+
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+    $.fn.materialinput._createEvents = function(){};
+    Metro.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+    <link href="custom--streamer.css" rel="stylesheet">
+
+    <style>
+        .slide-data {
+            will-change: transform;
+            -webkit-transform-style: preserve-3d;
+            -webkit-backface-visibility: hidden;
+        }
+    </style>
+
+    <title>Streamer - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container">
+    <div class="mt-20 mb-20">
+        <button class="button" onclick="reload(1)">Load JSON1</button>
+        <button class="button" onclick="reload(2)">Load JSON2</button>
+        <button class="button" onclick="reload2(1)">Load JSON1 method 2</button>
+        <button class="button" onclick="reload2(2)">Load JSON2 method 2</button>
+    </div>
+    <div id="streamer" class="streamer-expand-sm"
+         data-role="streamer"
+         data-data='{"timeline": {"start": "08:00","stop": "21:00","step": 5}}'
+         data-start-from="08:00"
+         data-slide-to-start="false"
+         data-on-events-scroll="eventsScroll"
+         data-on-load-error="errorHandler"
+         data-on-load="loadHandler"
+    ></div>
+</div>
+
+
+<script>
+
+    function loadHandler(source, data) {
+        console.log(source);
+        console.log(data);
+    }
+
+    function errorHandler(source, xhr){
+        console.log(source);
+        console.log(xhr);
+    }
+
+    function reload(ind){
+        var source1="streamer_data_june-2.json";
+        var source2="streamer_data_june-3.json";
+        var streamer = $("#streamer").data('streamer');
+
+        streamer.source(ind === 1 ? source1 : source2);
+    }
+
+    function reload2(ind){
+        var source1="streamer_data_june-2.json";
+        var source2="streamer_data_june-3.json";
+        var streamer = $("#streamer").data('streamer');
+
+        $.get(ind === 1 ? source1 : source2, function(data){
+            streamer.dataSet(data);
+        });
+
+    }
+
+    function eventsScroll(scroll, oldScroll, scrollDir){
+        var el = $(this), streams = el.find(".streams");
+        var el_offset = el.offset().left;
+        var streams_width = streams.width();
+
+        $.each(el.find(".stream-event"), function(){
+            var event = $(this), data = event.find(".slide-data");
+            var event_offset = event.offset().left - el_offset - streams_width;
+            var data_width = data.width() + 36;
+            var event_width = event.width();
+            var visible_part = event_width + event_offset > 0 ? event_width + event_offset  : 0;
+
+            if (event_offset < 0) {
+                if (visible_part >= data_width) {
+                    data.css({
+                        left: Math.abs(event_offset)
+                    });
+                }
+            }
+
+            if (event_offset >= 0) {
+                data.css({
+                    left: 0
+                });
+            }
+        })
+    }
+</script>
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+
+</body>
+</html>

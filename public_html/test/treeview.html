@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>TreeView - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container mt-20">
+
+    <ul data-role="treeview">
+        <li>
+            <input type="checkbox" data-role="checkbox" data-caption="Play video" title="">
+            <ul>
+                <li><input type="checkbox" data-role="checkbox" data-caption="AVI" title=""></li>
+                <li><input type="checkbox" data-role="checkbox" data-caption="MPEG" title=""></li>
+                <li><input checked type="checkbox" data-role="checkbox" data-caption="VIDX" title=""></li>
+            </ul>
+        </li>
+<!--        <li><input type="checkbox" data-role="checkbox" data-caption="Play audio" title=""></li>-->
+<!--        <li>-->
+<!--            <input type="checkbox" data-role="checkbox" data-caption="Subtitles" title="">-->
+<!--            <ul>-->
+<!--                <li><input type="checkbox" data-role="checkbox" data-caption="English" title=""></li>-->
+<!--                <li><input checked type="checkbox" data-role="checkbox" data-caption="Ukrainian" title=""></li>-->
+<!--                <li><input type="checkbox" data-role="checkbox" data-caption="Dutch" title=""></li>-->
+<!--            </ul>-->
+<!--        </li>-->
+    </ul>
+</div>
+
+
+<script src="../js/jquery-3.3.1.min.js?ver=@@b-version"></script>
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+    function nodeExpand(node){
+        console.log(node); // li
+        console.log(this); // ul
+    }
+</script>
+</body>
+</html>

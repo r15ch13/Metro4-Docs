@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Table - Metro 4 :: Popular HTML, CSS and JS library</title>
+    <style>
+        .my-search-class .input .prepend {
+            font-weight: bold;
+            background: olive;
+            color: #fff;
+        }
+
+        .table.fixed-height tbody {
+                display: block;
+                height: 300px;
+                width: 100%;
+                overflow: auto;
+                /*table-layout: fixed;*/
+            }
+
+        .table.fixed-height thead tr{
+            display:block;
+        }
+    </style>
+</head>
+<body class="m4-cloak h-vh-100">
+
+<div class="container">
+    <DIV class="container-fluid mt-20">
+
+        <DIV class="cell-8 offset-2">
+
+            <DIV class="row mb-2">
+                <DIV class="cell-md-4 my-search-wrapper"></DIV>
+                <DIV class="cell-md-3 offset-5 my-rows-wrapper"></DIV>
+            </DIV>
+
+            <TABLE class="table cell-border striped fixed-height"
+                   data-role="table1"
+                   data-thousand-separator="."
+                   data-decimal-separator=","
+                   data-search-wrapper=".my-search-wrapper"
+                   data-rows-wrapper=".my-rows-wrapper"
+                   data-info-wrapper=".my-info-wrapper"
+                   data-pagination-wrapper=".my-pagination-wrapper"
+                   data-cls-head-cell="border-none bg-cyan fg-white"
+                   data-cls-search="my-search-class"
+                   data-show-rows-steps="false"
+                   data-rows="-1"
+            >
+                <THEAD>
+                <TR>
+                    <TH data-size="3%">&nbsp;</TH>
+                    <TH data-size="3%">&nbsp;</TH>
+                    <TH data-size="3%">&nbsp;</TH>
+                    <TH data-size="30%">Some Words</TH>
+                    <TH data-size="50%">Comment</TH>
+                    <TH data-size="11%">Machine</TH>
+                </TR>
+                </THEAD>
+
+                <TBODY>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_38" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="38"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_38" class="button warning square small rounded text-bold" editore="38"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Cantagalli</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">3</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_32" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="32"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_32" class="button warning square small rounded text-bold" editore="32"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Chiare Lettere</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_83" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="83"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_83" class="button warning square small rounded text-bold" editore="83"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Citt� Nuova</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_94" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="94"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_94" class="button warning square small rounded text-bold" editore="94"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Corbaccio</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">5</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_2" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="2"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_2" class="button warning square small rounded text-bold" editore="2"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">De Agostini</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">127</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_96" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="96"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_96" class="button warning square small rounded text-bold" editore="96"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">De Vecchi</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_74" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="74"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_74" class="button warning square small rounded text-bold" editore="74"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Disney Libri</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_81" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="81"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_81" class="button warning square small rounded text-bold" editore="81"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Doremi Junior</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_341" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="341"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_341" class="button warning square small rounded text-bold" editore="341"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Eaglemoss Collections</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_56" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="56"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_56" class="button warning square small rounded text-bold" editore="56"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edb</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">3</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_93" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="93"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_93" class="button warning square small rounded text-bold" editore="93"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edibimbi Junior</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">3</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_73" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="73"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_73" class="button warning square small rounded text-bold" editore="73"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edicart</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">5</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_241" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="241"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_241" class="button warning square small rounded text-bold" editore="241"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edimarketing srl</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_61" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="61"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_61" class="button warning square small rounded text-bold" editore="61"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Editrice Rogate</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_100" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="100"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_100" class="button warning square small rounded text-bold" editore="100"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Amrita</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_221" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="221"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_221" class="button warning square small rounded text-bold" editore="221"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Ares</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_161" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="161"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_161" class="button warning square small rounded text-bold" editore="161"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Art</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_5" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="5"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_5" class="button warning square small rounded text-bold" editore="5"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Del Prado</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">11</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_64" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="64"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_64" class="button warning square small rounded text-bold" editore="64"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni E/O</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_77" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="77"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_77" class="button warning square small rounded text-bold" editore="77"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Il Punto D'Incontro</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_7" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="7"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_7" class="button warning square small rounded text-bold" editore="7"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Master</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">66</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_29" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="29"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_29" class="button warning square small rounded text-bold" editore="29"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Messagg.Padova</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">8</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_99" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="99"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_99" class="button warning square small rounded text-bold" editore="99"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Polistampa</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_80" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="80"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_80" class="button warning square small rounded text-bold" editore="80"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Rns</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_44" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="44"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_44" class="button warning square small rounded text-bold" editore="44"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Edizioni Usborne</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_105" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="105"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_105" class="button warning square small rounded text-bold" editore="105"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Ed.Sion</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_91" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="91"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_91" class="button warning square small rounded text-bold" editore="91"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Einaudi</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">23</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_30" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="30"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_30" class="button warning square small rounded text-bold" editore="30"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Einstein</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_70" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="70"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_70" class="button warning square small rounded text-bold" editore="70"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Elledici</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">9</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_65" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="65"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_65" class="button warning square small rounded text-bold" editore="65"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Emme Edizioni</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">2</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_79" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="79"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_79" class="button warning square small rounded text-bold" editore="79"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Ewi</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_1" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="1"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_1" class="button warning square small rounded text-bold" editore="1"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Fabbri Editori</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">66</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_48" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="48"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_48" class="button warning square small rounded text-bold" editore="48"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Fanucci</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">1</TD>
+                </TR>
+                <TR>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        &nbsp;
+                    </TD>
+                    <TD class="text-center w-3" style="width: 3%;">
+                        <BUTTON id="EDIT_45" class="button square small rounded bg-darkCyan bg-cyan-hover" editore="45"><SPAN class="icon mif-pencil fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD class="text-center" style="width: 3%;">
+                        <BUTTON id="ART_45" class="button warning square small rounded text-bold" editore="45"><SPAN class="icon mif-stack fg-white"></SPAN></BUTTON>
+                    </TD>
+                    <TD style="width: 40%;">
+                        <SPAN class="text-bold">Fazi Editore</SPAN>
+                    </TD>
+                    <TD style="width: 40%;">
+                    </TD>
+                    <TD class="va-top text-right" style="width: 11%;">8</TD>
+                </TR>
+
+                </TBODY>
+            </TABLE>
+
+            <DIV class="row mb-2">
+                <DIV class="cell-md-8 my-pagination-wrapper"></DIV>
+                <DIV class="cell-md-4 text-right my-info-wrapper"></DIV>
+            </DIV>
+
+        </DIV>
+
+    </DIV>
+</div>
+
+
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+</body>
+</html>

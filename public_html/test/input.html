@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <meta name="metro4:jquery" content="false">-->
+
+    <link href="../metro/css/metro-all.css?ver=@@b-version" rel="stylesheet">
+
+    <title>Input - Metro 4 :: Popular HTML, CSS and JS library</title>
+</head>
+<body class="m4-cloak">
+
+<div class="container">
+    <input type="text" data-role="input" id="myInput">
+    <input type="text" data-role="input" id="myInput2" readonly="true">
+</div>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../metro/js/metro.js?ver=@@b-version"></script>
+<script>
+    var el = document.querySelector("#myInput");
+    el.addEventListener("change", function(){
+        console.log("change");
+    });
+    el.addEventListener("clear", function(){
+        console.log("clear");
+    })
+</script>
+</body>
+</html>
