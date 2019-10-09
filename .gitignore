@@ -65,4 +65,4 @@ package-lock.json
 deploy.bat
 commit.bat
 build.bat
-
+Deploy.js

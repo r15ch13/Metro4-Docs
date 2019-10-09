@@ -114,25 +114,6 @@ module.exports = function(grunt) {
                     }
                 ]
             }
-        },
-
-        ftp_push: {
-            main: {
-                options: {
-                    authKey: "metroui",
-                    host: "eg77.mirohost.net",
-                    dest: "metroui.org.ua/",
-                    port: 21,
-                    incrementalUpdates: false
-                },
-                files: [
-                    {
-                        expand: true,
-                        cwd: "build",
-                        src: ['**/*']
-                    }
-                ]
-            }
         }
     });
 
@@ -140,8 +121,7 @@ module.exports = function(grunt) {
         'clean',
         'postcss',
         'copy',
-        'replace',
-        'ftp_push'
+        'replace'
     ]);
 
 };
