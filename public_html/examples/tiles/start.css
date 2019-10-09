@@ -11,7 +11,9 @@
   display: none;
 }
 [class*=tile-] {
-  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
 }
 .tiles-group {
   margin-left: 0;

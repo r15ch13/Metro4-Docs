@@ -21,16 +21,20 @@
     "url": "https://github.com/olton/Metro4-Docs/issues"
   },
   "homepage": "https://metroui.org.ua",
+  "browserslist": [
+    "last 3 version"
+  ],
   "devDependencies": {
+    "autoprefixer": "^9.6.4",
+    "autoprefixer-core": "^6.0.1",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-ftp-push": "^1.2.1",
+    "grunt-postcss": "^0.9.0",
     "grunt-replace": "^1.0.1",
     "grunt-shell": "^3.0.1",
     "load-grunt-tasks": "^5.1.0",
-    "time-grunt": "^2.0.0",
-    "autoprefixer-core": "^6.0.1",
-    "grunt-postcss": "^0.9.0"
+    "time-grunt": "^2.0.0"
   }
 }
