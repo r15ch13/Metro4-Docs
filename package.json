@@ -4,7 +4,11 @@
   "description": "Documentation for Metro 4",
   "main": "Gruntfile.js",
   "scripts": {
-    "build": "npm install && grunt"
+    "build": "npm install && grunt",
+    "cy:test": "cypress open --config fileServerFolder=public_html,baseUrl=http://localhost:8080",
+    "cy:run": "cypress run --config fileServerFolder=public_html,baseUrl=http://localhost:8080",
+    "start": "http-server ./public_html -c-1 -s",
+    "test": "start-server-and-test start http://localhost:8080 cy:run"
   },
   "repository": {
     "type": "git",
@@ -27,6 +31,7 @@
   "devDependencies": {
     "autoprefixer": "^9.6.4",
     "autoprefixer-core": "^6.0.1",
+    "cypress": "^3.4.1",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-copy": "^1.0.0",
@@ -35,6 +40,8 @@
     "grunt-replace": "^1.0.1",
     "grunt-shell": "^3.0.1",
     "load-grunt-tasks": "^5.1.0",
-    "time-grunt": "^2.0.0"
+    "time-grunt": "^2.0.0",
+    "http-server": "0.9.0",
+    "start-server-and-test": "^1.10.0"
   }
 }
