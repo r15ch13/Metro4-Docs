@@ -1,5 +1,5 @@
 /*
- * Metro 4 Components Library v4.3.2  (https://metroui.org.ua)
+ * Metro 4 Components Library v4.3.1  (https://metroui.org.ua)
  * Copyright 2012-2019 Sergey Pimenov
  * Licensed under MIT
  */
@@ -543,7 +543,7 @@ function iif(val1, val2, val3){
 
 // Source: src/core.js
 
-var m4qVersion = "v1.0.2. Built at 09/10/2019 14:15:13";
+var m4qVersion = "v1.0.1. Built at 24/09/2019 15:20:29";
 var regexpSingleTag = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
 
 var matches = Element.prototype.matches
@@ -1669,7 +1669,7 @@ $.fn.extend({
                 };
 
                 Object.defineProperty(h, "name", {
-                    value: handler.name && handler.name !== "" ? handler.name : "func_event_"+name+"_"+$.eventUID
+                    value: handler.name.trim() !== "" ? handler.name : "func_event_"+name+"_"+$.eventUID
                 });
 
                 originEvent = name+(sel ? ":"+sel:"")+(ns ? ":"+ns:"");
@@ -3595,9 +3595,9 @@ var isTouch = (('ontouchstart' in window) || (navigator["MaxTouchPoints"] > 0) |
 
 var Metro = {
 
-    version: "4.3.2",
-    compileTime: "09/10/2019 14:30:42",
-    buildNumber: "739",
+    version: "4.3.1",
+    compileTime: "25/09/2019 23:11:38",
+    buildNumber: "738",
     isTouchable: isTouch,
     fullScreenEnabled: document.fullscreenEnabled,
     sheet: null,
@@ -14517,36 +14517,29 @@ var Hotkey = {
     }
 };
 
-function bindKey(key, fn){
+$.fn.hotkey = function(key, fn){
     return this.each(function(){
         $(this).on(Metro.events.keyup+".hotkey-method-"+key, function(e){
             var _key = Hotkey.getKey(e);
-            var el = $(this);
-            var href = ""+el.attr("href");
-
-            if (key !== _key) {
-                return;
-            }
-
-            if (el.is("a")) {
-                if (href && href.trim() !== "#") {
-                    window.location.href = href;
-                }
-            }
-
-            Utils.exec(fn, [e, _key, key], this);
+            if (key === _key) Utils.exec(fn, [e, _key, key], this);
         })
     })
-}
-
-$.fn.hotkey = bindKey;
+};
 
 if (METRO_JQUERY && jquery_present) {
-    jQuery.fn.hotkey = bindKey;
+    jQuery.fn.hotkey = function(key, fn){
+        return this.each(function(){
+            $(this).on(Metro.events.keyup+".hotkey-method-"+key, function(e){
+                var _key = Hotkey.getKey(e);
+                if (key === _key) Utils.exec(fn, [e, _key, key], this);
+            })
+        })
+    };
 }
 
+
 $(document).on(Metro.events.keyup + ".hotkey-data", function(e){
-    var el, fn, key, href;
+    var el, fn, key;
 
     if (
         (METRO_HOTKEYS_FILTER_INPUT_ACCEPTING_ELEMENTS && /textarea|input|select/i.test(e.target.nodeName)) ||
@@ -14560,19 +14553,10 @@ $(document).on(Metro.events.keyup + ".hotkey-data", function(e){
     key = Hotkey.getKey(e);
 
     if (Utils.keyInObject(Metro.hotkeys, key)) {
-        el = $(Metro.hotkeys[key][0]);
+        el = Metro.hotkeys[key][0];
         fn = Metro.hotkeys[key][1];
-        href = (""+el.attr("href")).trim();
 
-        if (fn) {
-            Utils.exec(fn);
-        } else {
-            if (el.is("a") && href && href.length > 0 && href.trim() !== "#") {
-                window.location.href = href;
-            } else {
-                el.click();
-            }
-        }
+        fn === false ? $(el).click() : Utils.exec(fn);
     }
 });
 
@@ -21373,11 +21357,11 @@ var Slider = {
                     val: that.value,
                     percent: that.percent
                 });
-            }, {ns: slider.attr("id")});
+            });
 
             $(document).on(Metro.events.stopAll, function(){
-                $(document).off(Metro.events.moveAll, {ns: slider.attr("id")});
-                $(document).off(Metro.events.stopAll, {ns: slider.attr("id")});
+                $(document).off(Metro.events.moveAll);
+                $(document).off(Metro.events.stopAll);
 
                 if (o.hintAlways !== true) {
                     hint.fadeOut(300);
@@ -21388,7 +21372,7 @@ var Slider = {
                     val: that.value,
                     percent: that.percent
                 });
-            }, {ns: slider.attr("id")});
+            });
 
             Utils.exec(o.onStart, [that.value, that.percent], element[0]);
             element.fire("start", {
@@ -21604,8 +21588,8 @@ var Slider = {
             if (slider_visible) {
                 marker.css('top', length - this.pixel);
             } else {
-                marker.css('top', (100 - this.percent) + "%");
-                marker.css('margin-top', marker_size / 2);
+                marker.css('top', this.percent + "%");
+                marker.css('margin-top', this.percent === 0 ? 0 : -1 * marker_size / 2);
             }
             complete.css('height', this.percent+"%");
         } else {

@@ -40,7 +40,6 @@ pre {
 }
 .toc-wrapper,
 #sidenav {
-  position: -webkit-sticky;
   position: sticky;
   top: 64px;
   max-height: calc(100vh - 64px);
@@ -168,7 +167,6 @@ footer p a {
 }
 @media screen and (min-width: 768px) {
   #sidenav {
-    position: -webkit-sticky;
     position: sticky;
     top: 64px;
   }
@@ -235,11 +233,8 @@ footer p a {
   width: 4rem;
 }
 .icon-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .icon-list li {
   width: 100%;
@@ -304,12 +299,8 @@ pre .copy-button {
 }
 .special-thanks,
 .who-uses {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .special-thanks [class*=cell-],
 .who-uses [class*=cell-] {
@@ -325,12 +316,8 @@ pre .copy-button {
   margin-bottom: 10px;
 }
 .who-uses .slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .who-uses img {
   width: auto;
@@ -351,8 +338,6 @@ body {
 }
 .hero-bg {
   background: #8c0c1d;
-  background: -o-linear-gradient(top, #8c0c1d 0%, #d95555 100%);
-  background: -webkit-gradient(linear, left top, left bottom, from(#8c0c1d), to(#d95555));
   background: linear-gradient(to bottom, #8c0c1d 0%, #d95555 100%);
 }
 .hero {
@@ -382,9 +367,7 @@ body {
   position: absolute;
   top: 100%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 11;
 }
 .neb-hero::after {
@@ -440,6 +423,12 @@ footer a:hover {
   .neb-white {
     z-index: 10;
   }
+  #feature-table-wrapper {
+    height: 220px;
+  }
+  .feature-table {
+    top: -240px;
+  }
   .info-panel {
     height: 470px;
     margin-top: 0;
@@ -477,3 +466,4 @@ h1 + .text-leader {
 .toc-entry ul {
   margin-top: 0;
 }
+/*# sourceMappingURL=site.css.map */
