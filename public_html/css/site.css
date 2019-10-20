@@ -354,8 +354,8 @@ body {
 }
 .hero-bg {
   background: #8c0c1d;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8c0c1d), to(#d95555));
   background: -o-linear-gradient(top, #8c0c1d 0%, #d95555 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8c0c1d), to(#d95555));
   background: linear-gradient(to bottom, #8c0c1d 0%, #d95555 100%);
 }
 .hero {
