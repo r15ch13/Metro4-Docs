@@ -1443,25 +1443,14 @@
                 <p>
                     You can customize style of table and its elements with next options:
                 </p>
-                <table class="table cell-border table-border options-table mt-4">
-                    <thead>
-                    <tr>
-                        <th>Option</th>
-                        <th><code>Data-*</code></th>
-                        <th>Desc</th>
-                    </tr>
-                    </thead>
+                <script>
+                    var customizeAttributes = [
+                        ["clsComponent", "data-cls-component", "Additional classes for table component"],
+                        ["clsTableContainer", "data-cls-table-container", "Additional for table container"],
+                    ];
+                </script>
+                <table class="table cell-border table-border options-table mt-4" data-role="table" data-static="true" data-head="optionsTableHeader" data-body="customizeAttributes">
                     <tbody>
-                    <tr>
-                        <td>clsComponent</td>
-                        <td><code>data-cls-component</code></td>
-                        <td>Additional class for component</td>
-                    </tr>
-                    <tr>
-                        <td>clsTableContainer</td>
-                        <td><code>data-cls-table-container</code></td>
-                        <td>Additional class for table container</td>
-                    </tr>
                     <tr>
                         <td>clsTable</td>
                         <td><code>data-cls-table</code></td>
@@ -1664,7 +1653,8 @@
     </div>
 
     <script src="docsearch/docsearch.min.js"></script>
-<script src="js/ie11.js"></script>
+    <script src="js/ie11.js"></script>
+    <script src="js/defines.js"></script>
 
     <script src="metro/js/metro.js?ver=@@b-version"></script>
     <script src="highlight/highlight.pack.js"></script>

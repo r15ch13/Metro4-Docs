@@ -101,6 +101,9 @@ pre {
   position: relative;
   margin: 0.5rem 1rem 0.2rem -0.5rem;
 }
+ul.toc-nav {
+  margin-left: 20px;
+}
 #doc-nav {
   max-height: calc(100vh - 140px);
   overflow-y: auto;
@@ -351,8 +354,8 @@ body {
 }
 .hero-bg {
   background: #8c0c1d;
-  background: -o-linear-gradient(top, #8c0c1d 0%, #d95555 100%);
   background: -webkit-gradient(linear, left top, left bottom, from(#8c0c1d), to(#d95555));
+  background: -o-linear-gradient(top, #8c0c1d 0%, #d95555 100%);
   background: linear-gradient(to bottom, #8c0c1d 0%, #d95555 100%);
 }
 .hero {
